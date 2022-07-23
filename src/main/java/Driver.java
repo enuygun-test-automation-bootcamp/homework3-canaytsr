@@ -3,7 +3,6 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class Driver implements pageLogin,pageRegister {
     public WebDriver driver;

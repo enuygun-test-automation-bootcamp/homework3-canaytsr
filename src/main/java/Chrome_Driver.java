@@ -1,18 +1,11 @@
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Chrome_Driver extends Driver{
     String absolutePath;
     ChromeOptions options = new ChromeOptions(); //create options
-
-    public void setAbsolutePath(String absolutePath) {
-
-        this.absolutePath = absolutePath; //set absolutePath
-    }
 
     @Override
     public void setDriver() { //override the interfaces set driver method
@@ -35,13 +28,10 @@ public class Chrome_Driver extends Driver{
     }
 
     public void profileSet() {//set chrome profile
-        /*To use the profile feature, we need a value
-        between 100 or 101.0 for the chrome version
-        and 100 to 85 for the CDP version.
-        */
 
-        this.options.addArguments("user-data-dir=C:\\Users\\LENOVO\\AppData\\Local\\Google\\Chrome\\User Data\\Default");
-        this.driver= new ChromeDriver(options);//set chrome profile
+        this.options.addArguments("user-data-dir=C://Users//LENOVO//AppData//Local//Google//Chrome//User Data");
+        this.options.addArguments("profile-directory=Default");
+        this.driver = new ChromeDriver(options);
 
     }
 }

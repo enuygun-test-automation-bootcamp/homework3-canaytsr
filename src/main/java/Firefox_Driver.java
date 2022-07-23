@@ -1,16 +1,9 @@
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Firefox_Driver extends Driver {
-
     String absolutePath;
-
-    public void setAbsolutePath(String absolutePath){ //set absolutePath
-
-        this.absolutePath = absolutePath;
-    }
 
     @Override
     public void setDriver() {//override the interfaces set driver method

@@ -1,7 +1,5 @@
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.concurrent.TimeUnit;
-
 public class MainPage {
     public static void main(String[] args) {
 
@@ -9,13 +7,13 @@ public class MainPage {
 
         Chrome_Driver driverChrome = new Chrome_Driver();//create new Driver
         driverChrome.setUrl(url);//set url
-       // driverChrome.profileSet();//set the profile
         driverChrome.setDriver();//driver's type is set to a Chrome
         driverChrome.maximizePage();//page maximized
         driverChrome.OpenSignInPage();//open sigin page
+       // driverChrome.waitPage(60);//wait 60 second
         driverChrome.closeLogin();//retun homepage
-        driverChrome.waitPage(30);//wait 30 second
         driverChrome.OpenSignUpPage();//open signup page
+        //driverChrome.profileSet();
         driverChrome.closePage();//close driver
 
 
@@ -24,10 +22,9 @@ public class MainPage {
         driverFirefox.setDriver();//driver's type is set to a Firefox
         driverFirefox.maximizePage();//page maximized
         driverFirefox.OpenSignInPage();//open signin page
-        driverFirefox.waitPage(30);//wait 30 second
+        driverFirefox.waitPage(60);//wait 60 second
         driverFirefox.OpenSignUpPage();//open signup page
         driverFirefox.closePage();//close driver
-
 
 
 
@@ -52,7 +49,6 @@ public class MainPage {
         driver2.OpenLoginPage();//get login page
         driver2.OpenRegisterPage();//get register page
         driver2.closeDriver();//close driver
-
 
 
     }

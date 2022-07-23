@@ -5,8 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
 public class Drivers implements LoginRegisterPage {
     DriverType type;
     String url;
